@@ -1,13 +1,13 @@
 # Frontend Mentor - Time tracking dashboard solution using ReactJs
 
-![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Time tracking dashboard coding challenge](./design/desktop-design.jpg)
 
 This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-reactjs-time-tracking-dashboard--WRXlO-KSD)
+- Live Site URL: [Netlify](https://ed-fem-time-tracking-dashboard.netlify.app/)
 
 ## My process
 
