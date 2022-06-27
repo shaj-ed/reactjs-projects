@@ -1,0 +1,79 @@
+@use "./variables" as *;
+@use "./mixins" as mixins;
+
+@use "./thumb";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-stack;
+  font-size: 62.5%;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  width: 100%;
+
+  @include mixins.device-size(xlarge) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.slider-button {
+  @include mixins.button-icon;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: $pale-orange;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover svg {
+    path {
+      fill: $orange;
+    }
+  }
+
+  svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  @include mixins.device-size(large) {
+    &.hide {
+      display: none;
+    }
+  }
+
+  img {
+    transform: scale(0.9);
+  }
+
+  &.next {
+    right: 1.5rem;
+  }
+
+  &.prev {
+    left: 1.5rem;
+  }
+}

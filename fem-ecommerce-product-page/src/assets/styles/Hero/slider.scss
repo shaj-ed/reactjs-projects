@@ -1,0 +1,69 @@
+@use "./../variables" as *;
+@use "./../mixins" as mixins;
+
+.slider {
+  width: 100%;
+  height: 38rem;
+  position: relative;
+  overflow: hidden;
+
+  .slider-button {
+    display: block;
+  }
+
+  @include mixins.device-size(large) {
+    width: 45rem;
+    height: 45rem;
+    border-radius: 1.5rem;
+
+    .slider-button {
+      display: none;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    &--active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &--next {
+      transform: translateX(100%);
+    }
+
+    &--prev {
+      transform: translateX(-100%);
+    }
+
+    @include mixins.device-size(large) {
+      cursor: pointer;
+      border-radius: 1.5rem;
+    }
+  }
+}
+
+.slider__image.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slider__image.next {
+  transform: translateX(100%);
+}
+
+.slider__image.prev {
+  transform: translateX(-100%);
+}

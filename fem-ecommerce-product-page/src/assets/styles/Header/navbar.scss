@@ -1,0 +1,68 @@
+@use "./../variables" as *;
+@use "./../mixins" as mixins;
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  width: 60vw;
+  height: 100vh;
+  background-color: $white;
+  padding: 17rem 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+
+  @include mixins.device-size(medium) {
+    position: initial;
+    transform: initial;
+    width: initial;
+    height: initial;
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+    margin-right: auto;
+  }
+
+  &.show-nav {
+    transform: translateX(0);
+  }
+
+  &__item {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $very-dark-blue;
+    transition: all 0.2s ease-in-out;
+
+    @include mixins.device-size(medium) {
+      font-weight: 400;
+      color: $dark-grayish-blue;
+      font-size: 1.6rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0.4rem;
+        background-color: $orange;
+        bottom: -6rem;
+        left: 0;
+        border-radius: 1rem;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        color: $very-dark-blue;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

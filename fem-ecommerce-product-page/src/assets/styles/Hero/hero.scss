@@ -1,0 +1,154 @@
+@use "./../variables" as *;
+@use "./../mixins" as mixins;
+
+.product {
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+
+  @include mixins.device-size(large) {
+    max-width: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    padding: 8rem 1rem;
+  }
+
+  &__slider,
+  &__content {
+    width: 100%;
+  }
+
+  &__content {
+    padding: 2rem;
+
+    @include mixins.device-size(large) {
+      padding: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: $orange;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $very-dark-blue;
+    margin: 1.8rem 0 2.2rem 0;
+
+    @include mixins.device-size(xlarge) {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+    text-transform: capitalize;
+    color: $dark-grayish-blue;
+  }
+
+  &__price,
+  &__quantity {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    margin: 2.8rem 0 2rem 0;
+
+    @include mixins.device-size(medium) {
+      margin: 3.5rem 0 3.2rem 0;
+      display: block;
+    }
+  }
+
+  &__amount {
+    font-size: 2.2rem;
+    margin-right: 2rem;
+  }
+
+  &__percent {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    background-color: $pale-orange;
+    color: $orange;
+    border-radius: 0.5rem;
+    margin-right: auto;
+  }
+
+  &__discount {
+    color: $grayish-blue;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    @include mixins.device-size(medium) {
+      margin-top: 1.2rem;
+      display: block;
+    }
+  }
+
+  &__quantity {
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: $light-grayish-blue;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    @include mixins.device-size(large) {
+      display: inline-flex;
+      max-width: 15rem;
+    }
+
+    @include mixins.device-size(large) {
+      margin-right: 1.8rem;
+    }
+
+    &--button {
+      @include mixins.button-icon;
+      color: $orange;
+      font-size: 2.8rem;
+      font-weight: 700;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__button {
+    @include mixins.button-primary;
+    margin-top: 1.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    @include mixins.device-size(large) {
+      margin-top: 0;
+      display: inline-flex;
+      max-width: 25rem;
+    }
+
+    svg {
+      path {
+        fill: $pale-orange;
+      }
+    }
+  }
+}

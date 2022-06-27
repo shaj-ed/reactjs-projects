@@ -1,0 +1,73 @@
+@use "./../variables" as *;
+@use "./../mixins" as mixins;
+
+.lightbox {
+  display: none;
+
+  @include mixins.device-size(large) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 3rem 0;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 100;
+
+    &.open {
+      display: grid;
+      place-items: center;
+    }
+
+    &__inner {
+      width: 50rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      gap: 3rem;
+      position: relative;
+
+      .slider {
+        width: 100%;
+        height: 50rem;
+        overflow: initial;
+      }
+
+      .thumb {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .slider-button {
+        display: block;
+
+        &.next {
+          right: -1.8rem;
+        }
+
+        &.prev {
+          left: -1.8rem;
+        }
+      }
+    }
+
+    &__delete {
+      @include mixins.button-icon;
+      position: absolute;
+      right: 0;
+      top: -2.5rem;
+
+      &:hover svg {
+        fill: $orange;
+      }
+
+      svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        fill: $white;
+      }
+    }
+  }
+}
