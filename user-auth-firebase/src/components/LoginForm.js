@@ -15,7 +15,7 @@ const LoginForm = () => {
     e.preventDefault();
     setLoading(true);
     logIn(email, password);
-    navigate("/profile/user");
+    navigate("/");
   };
 
   return (
@@ -39,9 +39,9 @@ const LoginForm = () => {
         {loading ? "Loading.." : "Log In"}
       </button>
       <p className="text-xs text-white font-medium self-center">
-        or{" "}
+        or
         <Link
-          to="/"
+          to="/signup"
           className="text-purple-300 hover:underline hover:decoration-21hover:decoration-purple-300"
         >
           create an account?

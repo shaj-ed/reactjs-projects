@@ -3,7 +3,10 @@ import LoginPage from "./pages/LoginPage";
 import Layout from "./pages/Layout";
 import SignUpPage from "./pages/SignUpPage";
 import { AuthProvider } from "./context/AuthContext";
-import User from "./components/User";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import PrivateRoute from "./components/PrivateRoute";
+import Protect from "./components/Protect";
 
 function App() {
   return (
@@ -11,10 +14,17 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<SignUpPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/profile/user" element={<User />} />
+            <Route index element={<Home />} />
+            <Route path="/*" element={<PrivateRoute />}>
+              <Route path="dashboard" element={<Dashboard />} />
+            </Route>
           </Route>
+
+          <Route path="/*" element={<Protect />}>
+            <Route path="signup" element={<SignUpPage />} />
+          </Route>
+
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

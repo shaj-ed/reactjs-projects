@@ -7,5 +7,6 @@
 @layer base {
   html {
     font-family: "Nunito", sans-serif;
+    background-color: rgb(22 78 99);
   }
 }

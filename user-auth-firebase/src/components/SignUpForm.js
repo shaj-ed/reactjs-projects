@@ -18,7 +18,7 @@ const SignUpForm = () => {
     setLoading(true);
     if (!checked || password !== confirmPassword) return;
     signUp(email, password, userName);
-    navigate("/profile/user");
+    navigate("/");
   };
 
   return (
