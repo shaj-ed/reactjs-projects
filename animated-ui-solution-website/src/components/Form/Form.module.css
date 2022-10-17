@@ -1,0 +1,42 @@
+.form {
+  width: 100%;
+  max-width: 30rem;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.input,
+.textarea {
+  background-color: transparent;
+  font-family: var(--font-stack);
+  color: var(--accent);
+  outline: 0;
+  border: 0.1rem solid transparent;
+  border-bottom: 0.1rem solid #999;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.input:focus,
+.textarea:focus {
+  border: 0.1rem solid #999;
+}
+
+.button {
+  outline: 0;
+  border: 0;
+  background-color: var(--background-primary);
+  color: var(--accent);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,49 @@
+.showcase {
+  composes: wrapper from "./../../App.module.css";
+  padding: 8rem 3rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  composes: headline from "./../../App.module.css";
+}
+
+.description {
+  composes: info from "./../../App.module.css";
+  margin: 1.5rem 0 3rem 0;
+}
+
+.image {
+  width: 100%;
+}
+
+.image img {
+  width: 100%;
+}
+
+.cta {
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  background-color: var(--body-background);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.cta:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 968px) {
+  .showcase {
+    padding: 5rem 3rem;
+  }
+
+  .content {
+    text-align: left;
+    align-self: center;
+    max-width: 50rem;
+  }
+}
