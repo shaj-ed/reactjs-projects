@@ -1,0 +1,16 @@
+.projects {
+  width: 100%;
+  padding: 3rem;
+  max-width: 70rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+@media (min-width: 968px) {
+  .projects {
+    max-width: 100rem;
+  }
+}

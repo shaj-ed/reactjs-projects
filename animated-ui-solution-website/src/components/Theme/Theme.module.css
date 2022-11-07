@@ -1,0 +1,46 @@
+.container {
+  position: absolute;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: var(--background-toggle);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.container.active {
+  opacity: 1;
+  pointer-events: fill;
+}
+
+.container span {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 0.5rem;
+  left: 0.8rem;
+  border-radius: 10rem;
+  font-size: 2rem;
+  background-color: #eee;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.container input[type="checkbox"]:checked ~ span {
+  transform: translateX(2.5rem);
+}
+
+@media (min-width: 700px) {
+  .container {
+    position: relative;
+    opacity: 1;
+    pointer-events: fill;
+  }
+}

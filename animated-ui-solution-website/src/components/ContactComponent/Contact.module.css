@@ -1,0 +1,24 @@
+.contact {
+  width: 100%;
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 3rem;
+}
+
+.title {
+  composes: headline from "./../../App.module.css";
+  text-align: center;
+}
+
+.desc {
+  composes: info from "./../../App.module.css";
+  max-width: 40rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+@media (min-width: 968px) {
+  .contact {
+    max-width: 100rem;
+  }
+}

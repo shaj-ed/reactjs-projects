@@ -1,0 +1,41 @@
+.headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.info {
+  font-size: 1.6rem;
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: calc(70rem - 5rem);
+  margin: 1rem auto;
+  background-color: var(--background-showcase);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  border-radius: 0.3rem;
+}
+
+@media (min-width: 700px) {
+  .headline {
+    font-size: 4rem;
+  }
+
+  .info {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 968px) {
+  .wrapper {
+    max-width: calc(100rem - 8rem);
+    margin: 3rem auto;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

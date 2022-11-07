@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+:root {
+  --font-stack: "Ubuntu", sans-serif;
+  --body-background: #dedede;
+  --accent: #11030a;
+  --accent-secondary: #303d3d;
+
+  --background-primary: #685b55;
+  --background-secondary: #b9b2ae;
+  --background-toggle: #1db9c3;
+  --background-showcase: #a5a6b0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-stack);
+  font-size: 62.5%;
+  background-color: var(--body-background);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+button {
+  outline: 0;
+}
+
+.footer__inner {
+  display: grid;
+  gap: 3rem;
+}
+
+[color-theme="dark"] {
+  --body-background: #252638;
+  --accent: #dedede;
+  --accent-secondary: #ac9999;
+
+  --background-primary: #271e1d;
+  --background-secondary: #26202c;
+  --background-toggle: #010114;
+  --background-showcase: #64475f;
+}
