@@ -7,3 +7,4 @@
 ## 5. user-auth-firebase (react-router-dom, tailwindcss, firebase)
 ## 6. ecommerce-product-app (tailwindcss, react-router-dom, API)
 ## 7. animated-ui-solution-website(css module, react-router-dom, framer motion, dark light mode)
+## 8. cart-app-redux-toolkit(tailwindcss, react-redux, redux-toolkit, fetch, createAsyncThunk)
