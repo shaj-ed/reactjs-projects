@@ -9,6 +9,8 @@ export const HeaderStyled = styled(motion.header)`
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
+  z-index: 1000;
+  position: relative;
 
   @media (min-width: 768px) {
     padding: 0 2.5rem;

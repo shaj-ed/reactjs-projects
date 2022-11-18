@@ -41,7 +41,7 @@ export const ContentStyled = styled.div`
   }
 
   p {
-    width: 28.625rem;
+    max-width: 28.625rem;
     margin: 0 auto;
   }
 
