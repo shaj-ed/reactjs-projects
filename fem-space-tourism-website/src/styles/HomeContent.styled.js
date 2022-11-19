@@ -76,6 +76,7 @@ export const ExploreButton = styled(Link)`
   @media (min-width: 1024px) {
     width: 17.125rem;
     height: 17.125rem;
+    margin: 9.75rem 0 0 auto;
   }
 
   &::before {
