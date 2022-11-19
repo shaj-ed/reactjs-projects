@@ -12,8 +12,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-responsive-react-redux-website-y6Ru8uggQh)
+- Live Site URL: [Netlify](https://fem-space-tourism-website-ed.netlify.app/)
 
 ## My process
 
